@@ -5,20 +5,26 @@
   width: 100%;
 }
 header {
-  display: flex;
-  flex-flow: row nowrap;
   width: 80%;
   background: orange;
   margin: 0 auto;
+
+  display: flex;
+  flex-flow: row nowrap;
 }
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+
   background-color: #aaaaaa;
 }
 
 .logo img {
-  width: 100%;
+  width: 80px;
+}
+
+nav {
+  flex-basis: 85%;
+  background: palegreen;
 }
 
 .main {
@@ -50,5 +56,13 @@ header {
 .sns_wrap {
   display: flex;
   flex-flow: row nowrap;
-  /* align-items: center; */
+
+  flex-basis: 15%;
+  justify-content: center;
+  border: 1px solid rebeccapurple;
+  align-items: center;
+}
+
+div.sns:nth-child(1) {
+  margin-right: 10px;
 }
