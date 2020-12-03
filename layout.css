@@ -75,9 +75,15 @@ ul.sub {
   top: 55px;
 }
 
+/* li.sub {
+  position: absolute;
+  top: 55px;
+} */
+
 ul.sub li:hover {
   background-color: darkblue;
 }
+
 /* nav */
 
 /* header__sns */
@@ -98,3 +104,14 @@ ul.header__sns li:nth-child(1) {
 /* header__sns */
 
 /* header */
+
+@media screen and(max-width:768px) {
+  header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
