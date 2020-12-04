@@ -118,6 +118,11 @@ ul.header__sns li:nth-child(1) {
 
   nav {
     width: 100%;
-    justify-self: center;
+    justify-content: center;
+  }
+
+  ul.header__sns {
+    width: 100%;
+    justify-content: center;
   }
 }
