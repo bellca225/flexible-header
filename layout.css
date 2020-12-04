@@ -57,7 +57,7 @@ ul.main > li {
 }
 
 ul.main > li:hover {
-  background-color: royalblue;
+  background-color: #f59f00;
 }
 
 ul.sub li {
@@ -124,5 +124,10 @@ ul.header__sns li:nth-child(1) {
   ul.header__sns {
     width: 100%;
     justify-content: center;
+  }
+
+  nav li {
+    width: 100vh;
+    background-color: ;
   }
 }
