@@ -1,6 +1,7 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
+
 a {
   text-decoration: none;
   color: #fff;
@@ -10,6 +11,7 @@ a {
 
 .header__back {
   background: #263343;
+  /* padding-bottom: 10px; */
 }
 header {
   width: 70%;
@@ -35,14 +37,15 @@ header {
 /* nav */
 nav {
   display: flex;
-  align-items: center;
+
+  align-items: baseline;
 }
 
 /* 모든 li 공통 요소 */
 nav li {
   width: 100px;
-  padding: 8px 12px;
 
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,19 +57,22 @@ ul.main {
 
 ul.main > li {
   color: #fff;
+  margin: 8px 12px;
 }
 
 ul.main > li:hover {
-  background-color: #f59f00;
+  color: #e67700;
 }
 
 ul.sub li {
-  background-color: crimson;
+  /* background-color: ; */
   text-align: center; /* a tag 가운데 맞춤용 */
   display: none;
+  background-color: #495057;
+  margin-top: 5px;
 }
 
-ul.main > li:hover .sub li {
+ul.main > li:hover ul.sub li {
   display: block;
 }
 
@@ -75,13 +81,8 @@ ul.main > li:hover .sub li {
   top: 55px;
 } */
 
-li.sub {
-  position: absolute;
-  top: 55px;
-}
-
 ul.sub li:hover {
-  background-color: darkblue;
+  background-color: #e67700;
 }
 
 /* nav */
@@ -95,7 +96,7 @@ ul.sub li:hover {
 
 ul.header__sns {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 ul.header__sns li:nth-child(1) {
@@ -119,6 +120,7 @@ ul.header__sns li:nth-child(1) {
   nav {
     width: 100%;
     justify-content: center;
+    top: 0;
   }
 
   ul.header__sns {
@@ -128,6 +130,5 @@ ul.header__sns li:nth-child(1) {
 
   nav li {
     width: 100vh;
-    background-color: ;
   }
 }
