@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  background: #eee;
 }
 
 a {
@@ -12,16 +15,16 @@ a {
 div.header__back {
   background: #293a4e;
   /* padding-bottom: 10px; */
+  transition: 0.2s ease-in-out;
 }
 
 div.header__back:hover {
   background-color: #2a3f5a;
-  transition: 0.2s ease-in-out;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 header {
-  width: 70%;
+  width: 65%;
   margin: 0 auto;
 
   display: flex;
@@ -45,7 +48,7 @@ header {
 nav {
   display: flex;
   position: relative;
-  top: 15px;
+  top: 20px;
 }
 
 /* 모든 li 공통 요소 */
@@ -56,8 +59,6 @@ nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  transition: 0.2s ease-in-out;
 }
 
 ul.main {
@@ -72,6 +73,8 @@ ul.main > li {
 
 ul.main > li:hover {
   color: #e67700;
+  transition: 0.2s ease-in-out;
+  font-size: 18px;
 }
 
 ul.sub li {
@@ -79,25 +82,28 @@ ul.sub li {
   text-align: center; /* a tag 가운데 맞춤용 */
   display: none;
   /* background-color: #495057; */
+
   margin-top: 5px;
   padding: 5px 0;
   font-size: 13px;
 }
-ul.sub li:nth-child(1) {
+/* ul.sub li:nth-child(1) {
   margin-top: 10px;
-}
+} */
 
 ul.main > li:hover ul.sub li {
   display: block;
 }
 
-/* ul.sub {
-  position: absolute;
-  top: 55px;
-} */
-
 ul.sub li:hover {
+  /* border: 1px solid #e67700; */
   background-color: #e67700;
+
+  transition: 0.2s;
+}
+ul.sub li:active {
+  background-color: #ffb15e;
+  transition: 0.3s ease;
 }
 
 /* nav */
@@ -112,7 +118,7 @@ ul.sub li:hover {
 ul.header__sns {
   display: flex;
   position: relative;
-  top: 15px;
+  top: 20px;
 }
 
 ul.header__sns li:nth-child(1) {
@@ -120,28 +126,53 @@ ul.header__sns li:nth-child(1) {
 }
 /* header__sns */
 
+.header__toggleBtn {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 28px;
+}
+.fas {
+  color: rgba(255, 255, 255, 0.9);
+  display: none;
+}
+.fas:hover {
+  color: #e67700;
+  transition: 0.2s ease-in-out;
+}
+.fas:active {
+  color: #ffb15e;
+}
+
 /* header */
 
+/* Media  */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    padding: 5px 15px;
   }
 
-  .main {
+  ul.main {
     flex-direction: column;
+    justify-content: center;
+    /* width: 90%; */
   }
 
   nav {
     width: 100%;
     justify-content: center;
-    top: 0;
+    top: 10px;
+    display: none;
   }
 
   ul.header__sns {
     width: 100%;
     justify-content: center;
+    padding-bottom: 15px;
+    display: none;
   }
 
   nav li {
@@ -152,12 +183,31 @@ ul.header__sns li:nth-child(1) {
   .sub {
     width: 100%;
   }
-  /* 
-  ul.main > li {
+
+  /* ul.main > li {
     width: 100%;
-  } 다시 확인*/
+  } */
 
   ul.header__sns {
-    top: 0;
+    padding-bottom: 35px;
   }
+
+  div.header__back:hover {
+    padding-bottom: 0px;
+  }
+
+  .header__logo {
+    width: 100%;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  }
+  .header__logo img {
+    width: 65px;
+  }
+  .fas {
+    display: block;
+  }
+
+  /* ul.sub li {
+    width: 90%;
+  } */
 }
