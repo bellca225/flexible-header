@@ -153,9 +153,34 @@ ul.header__sns li:nth-child(1) {
   color: #ffb15e;
 }
 
+.sub__color {
+  background-color: #2f4766;
+  border-radius: 5px;
+}
+
 /* header */
 
 /* Media  */
+
+@media screen and (max-width: 1180px)  {
+  header {
+    width: 85%;
+  }
+  nav li {
+    width: 90px;
+    font-size: 50%;
+  }
+
+  ul.main > li{
+    font-size: 15px;
+  }
+
+  ul.main > li:hover{
+    font-size: 16px;
+  }
+
+
+
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
