@@ -4,25 +4,21 @@
 body {
   background: #eee;
 }
-
 a {
   text-decoration: none;
-  color: #fff;
+  color: #eee;
 }
 
-/* header */
+/* header start*/
 
 div.header__back {
+  /* 배경색 */
   background: #16202e;
-  /* padding-bottom: 10px; */
   transition: 0.2s ease-in-out;
 }
-
 div.header__back:hover {
   background-color: #2a3f5a;
-  /* padding-bottom: 20px; */
 }
-
 header {
   width: 65%;
   margin: 0 auto;
@@ -30,18 +26,16 @@ header {
   justify-content: space-between;
 }
 
-/* logo */
-.header__logo {
-  width: 80px;
-  /* height: 80px; */
+/* div.header__logo, nav , ul.header__sns => 3덩이로 나누어 관리 중*/
 
-  /* border: 3px solid rgba(225, 225, 225, 0.3);
-  border-radius: 50%; */
-}
-.header__logo img {
+/* logo start */
+div.header__logo {
   width: 80px;
 }
-/* logo */
+div.header__logo img {
+  width: 100%;
+}
+/* logo end*/
 
 /* nav */
 nav {
@@ -63,82 +57,69 @@ ul.main {
   display: flex;
   justify-content: space-between;
 }
-
 ul.main > li {
-  color: #fff;
+  color: #eee;
   margin: 8px 0;
   font-size: 17px;
 }
-
 ul.main > li:hover {
   color: #e67700;
   transition: 0.2s ease-in-out;
   font-size: 18px;
 }
+ul.main > li:hover ul.sub li {
+  display: block;
+}
 
-.sub {
+ul.sub {
   width: 100%;
+  background-color: #2f4766;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 ul.sub li {
   width: 100%;
   text-align: center; /* a tag 가운데 맞춤용 */
-  display: none;
-  /* background-color: #495057; */
-
   padding: 5px 0;
   font-size: 13px;
+  display: none;
 }
-
-ul.sub li:nth-child(1) {
-  margin-top: 10px;
-}
-/* ul.sub li:nth-child(1) {
-  margin-top: 10px;
-} */
-
-ul.main > li:hover ul.sub li {
-  display: block;
-}
-
 ul.sub li:hover {
-  /* border: 1px solid #e67700; */
   background-color: #e67700;
-
   transition: 0.2s;
 }
 ul.sub li:active {
   background-color: #ffb15e;
   transition: 0.3s ease;
 }
+/* nav end */
 
-/* nav */
-
-/* header__sns */
-
-.header__sns li img {
-  width: 32px;
-  height: 32px;
-}
+/* ul.header__sns start*/
 
 ul.header__sns {
   display: flex;
   margin-top: 20px;
+}
 
-  /* position: relative;
-  top: 20px; */
+ul.header__sns li img {
+  width: 32px;
+  height: 32px;
 }
 
 ul.header__sns li:nth-child(1) {
   margin-right: 10px;
 }
-/* header__sns */
+
+/* header__sns end*/
+
+/* hamburger menubar 관리 */
 
 .header__toggleBtn {
   position: absolute;
-  right: 25px;
-  top: 20px;
-  font-size: 28px;
+  right: 26px;
+  top: 26px;
+  font-size: 30px;
   display: none;
 }
 .fas {
@@ -153,16 +134,11 @@ ul.header__sns li:nth-child(1) {
   color: #ffb15e;
 }
 
-.sub__color {
-  background-color: #2f4766;
-  border-radius: 5px;
-}
-
 /* header */
 
 /* Media  */
 
-@media screen and (max-width: 1180px)  {
+@media screen and (max-width: 1180px) {
   header {
     width: 85%;
   }
@@ -170,16 +146,13 @@ ul.header__sns li:nth-child(1) {
     width: 90px;
     font-size: 50%;
   }
-
-  ul.main > li{
+  ul.main > li {
     font-size: 15px;
   }
-
-  ul.main > li:hover{
+  ul.main > li:hover {
     font-size: 16px;
   }
-
-
+}
 
 @media screen and (max-width: 768px) {
   header {
@@ -188,27 +161,27 @@ ul.header__sns li:nth-child(1) {
     width: 100%;
     padding: 5px 15px;
   }
-
-  ul.main {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  ul.main {
-    border-top: 1.5px solid rgba(255, 255, 255, 0.1);
-  }
-
   nav {
     width: 100%;
     justify-content: center;
     margin-top: 0px;
     display: none;
   }
-
-  ul.main > li:nth-child(1) {
-    margin-top: 20px;
+  ul.main {
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.1);
   }
-
+  ul.main > li:nth-child(1) {
+    margin-top: 24px;
+  }
+  nav li {
+    width: 100%;
+  }
+  .main,
+  .sub {
+    width: 100%;
+  }
   ul.header__sns {
     width: 100%;
     justify-content: center;
@@ -216,51 +189,15 @@ ul.header__sns li:nth-child(1) {
     margin-top: 10px;
     display: none;
   }
-
-  nav li {
-    width: 100%;
-  }
-
-  .main,
-  .sub {
-    width: 100%;
-  }
-
-  /* ul.main > li {
-    width: 100%;
-  } */
-
-  div.header__back:hover {
-    padding-bottom: 0px;
-  }
-
-  .header__logo {
-    width: 100%;
-    /* border-bottom: 1.5px solid rgba(255, 255, 255, 0.1); */
-  }
-  .header__logo img {
-    width: 65px;
+  .header__toggleBtn {
+    display: block;
   }
   .fas {
     display: block;
   }
-  .main > li:hover .sub__color {
-    background-color: #2f4766;
-
-    border-radius: 5px;
-  }
-
-  .header__toggleBtn {
-    display: block;
-  }
-
   nav.act,
   .header__sns.act {
     display: flex;
     transition: 0.2s ease-in-out;
   }
-
-  /* ul.sub li {
-    width: 90%;
-  } */
 }
