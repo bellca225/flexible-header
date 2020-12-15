@@ -8,4 +8,3 @@ Iphone X
 
 ![ezgif com-gif-maker (mini)](https://user-images.githubusercontent.com/67679081/102173045-82e9ff80-3edd-11eb-9181-c9b82998e4d4.gif)
 
-thank U :)
